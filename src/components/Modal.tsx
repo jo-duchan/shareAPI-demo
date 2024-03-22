@@ -21,7 +21,9 @@ function Modal(props: ModalProps) {
           <h5>{props.title}</h5>
           <p>{props.text}</p>
         </div>
-        <button className="close" onClick={props.onClose}></button>
+        <button className="close" onClick={props.onClose}>
+          <img src={Close} alt="close icon" />
+        </button>
       </Content>
       <Dim onClick={props.onClose} />
     </Container>
@@ -101,21 +103,26 @@ const Content = styled.div`
   }
 
   & .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 12px;
     right: 12px;
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-image: ${`url(${Close})`};
-    background-repeat: no-repeat;
-    background-position: 50%;
     background-color: ${Colors.Basic[200]};
     border: initial;
     cursor: pointer;
     transition: opacity 200ms ease-in-out;
+
     :hover {
       opacity: 0.65;
+    }
+
+    img {
+      pointer-events: none;
     }
   }
 
