@@ -1,7 +1,7 @@
 const Colors = {
   Basic: {
     100: "#FFFFFF",
-    200: "CFCFCF",
+    200: "#CFCFCF",
     400: "#7A7A7A",
     500: "#5E5E5E",
     600: "#404040",

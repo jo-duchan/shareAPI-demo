@@ -107,14 +107,13 @@ const Content = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-image: url(${Close});
+    background-image: ${`url(${Close})`};
     background-repeat: no-repeat;
     background-position: 50%;
     background-color: ${Colors.Basic[200]};
     border: initial;
     cursor: pointer;
     transition: opacity 200ms ease-in-out;
-
     :hover {
       opacity: 0.65;
     }
